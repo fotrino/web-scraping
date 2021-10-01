@@ -6,7 +6,7 @@ class Articles(scrapy.Spider):
     name = 'articles'
     start_urls = []
 
-    with open('/Users/fotrino/Code/webmining/pagina12/world-links.json', encoding='utf-8') as json_file:
+    with open('pagina12/world-links.json', encoding='utf-8') as json_file:
         data = json.load(json_file)
         for link in data:
             start_urls.append(link['url'])
